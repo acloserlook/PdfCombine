@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfCombine", "PdfCombine\PdfCombine.csproj", "{BAA7B21F-213B-40CA-AD7F-D008E4F5721A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86BFE111-EDFE-487C-8748-EE7E8031DB5A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "PdfCombineSetup", "PdfCombineSetup\PdfCombineSetup.wixproj", "{7CC9EDCF-8287-4D45-A35D-CC47712E5001}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA7B21F-213B-40CA-AD7F-D008E4F5721A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA7B21F-213B-40CA-AD7F-D008E4F5721A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA7B21F-213B-40CA-AD7F-D008E4F5721A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA7B21F-213B-40CA-AD7F-D008E4F5721A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC9EDCF-8287-4D45-A35D-CC47712E5001}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7CC9EDCF-8287-4D45-A35D-CC47712E5001}.Release|Any CPU.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

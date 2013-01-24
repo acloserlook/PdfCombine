@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="PdfCombine" Language="1033" Version="1.0.0.0" Manufacturer="A Closer Look" UpgradeCode="d04319d0-1125-4521-880b-c0955442f1ce">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="PdfCombine" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+    <Icon Id="PdfCombine.exe" SourceFile="$(var.PdfCombine.ProjectDir)Combine Harvester.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="PdfCombine.exe" />
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyFolder" Name="A Closer Look">
+          <Directory Id="INSTALLFOLDER" Name="PdfCombine" />
+        </Directory>
+      </Directory>
+
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="CompanyMenuFolder" Name="A Closer Look" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents">
+      <Component Id="Files" Guid="7669D2F4-B878-4235-A3AA-D3E9910214B8" Directory="INSTALLFOLDER">
+        <File Name="ABCpdf.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf.dll" />
+        <File Name="ABCpdf8-32.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf8-32.dll" />
+        <File Name="ABCpdf8-64.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf8-64.dll" />
+        <File Name="PdfCombine.exe" Source="$(var.PdfCombine.TargetDir)PdfCombine.exe" />
+        <File Name="PdfCombine.exe.config" Source="$(var.PdfCombine.TargetDir)PdfCombine.exe.config" />
+        <File Name="PdfCombine.pdb" Source="$(var.PdfCombine.TargetDir)PdfCombine.pdb" />
+      </Component>
+      <Component Id="ProgramShortcut" Guid="5FA14E12-7A23-4552-B0A9-F40880422562" Directory="CompanyMenuFolder">
+        <Shortcut Id="StartMenuShortcut" Name="PdfCombine" Icon="PdfCombine.exe" IconIndex="0" Target="[INSTALLFOLDER]PdfCombine.exe" WorkingDirectory="INSTALLFOLDER"></Shortcut>
+        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
+        <RemoveFolder Id="CompanyMenuFolder" On="uninstall" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
