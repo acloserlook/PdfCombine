@@ -39,9 +39,9 @@
     <ApplicationIcon>Combine Harvester.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ABCpdf, Version=8.1.2.0, Culture=neutral, PublicKeyToken=a7a0b3f5184f2169, processorArchitecture=MSIL">
+    <Reference Include="ABCpdf, Version=9.1.0.2, Culture=neutral, PublicKeyToken=a7a0b3f5184f2169, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ABCpdf.8.1.2.0\lib\net20\ABCpdf.dll</HintPath>
+      <HintPath>..\packages\ABCpdf.9.1.0.2\lib\net40\ABCpdf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -108,13 +108,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\packages\ABCpdf.9.1.0.2\bin\ABCpdf9-32.dll">
+      <Link>ABCpdf9-32.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\packages\ABCpdf.9.1.0.2\bin\ABCpdf9-64.dll">
+      <Link>ABCpdf9-64.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Combine Harvester.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(SolutionDir)packages\ABCpdf.8.1.2.0\bin\ABCpdf8-32.dll" "$(TargetDir)"
-copy "$(SolutionDir)packages\ABCpdf.8.1.2.0\bin\ABCpdf8-64.dll" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

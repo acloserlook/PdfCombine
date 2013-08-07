@@ -32,8 +32,8 @@
     <ComponentGroup Id="ProductComponents">
       <Component Id="Files" Guid="7669D2F4-B878-4235-A3AA-D3E9910214B8" Directory="INSTALLFOLDER">
         <File Name="ABCpdf.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf.dll" />
-        <File Name="ABCpdf8-32.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf8-32.dll" />
-        <File Name="ABCpdf8-64.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf8-64.dll" />
+        <File Name="ABCpdf9-32.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf9-32.dll" />
+        <File Name="ABCpdf9-64.dll" Source="$(var.PdfCombine.TargetDir)ABCpdf9-64.dll" />
         <File Name="PdfCombine.exe" Source="$(var.PdfCombine.TargetDir)PdfCombine.exe" />
         <File Name="PdfCombine.exe.config" Source="$(var.PdfCombine.TargetDir)PdfCombine.exe.config" />
         <File Name="PdfCombine.pdb" Source="$(var.PdfCombine.TargetDir)PdfCombine.pdb" />

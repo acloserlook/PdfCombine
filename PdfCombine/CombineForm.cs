@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WebSupergoo.ABCpdf8;
+using WebSupergoo.ABCpdf9;
 
 namespace PdfCombine
 {
